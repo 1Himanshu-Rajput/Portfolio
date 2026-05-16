@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Himanshu Raj — Computer Science Student, Web Developer, and Startup Builder crafting meaningful digital products." />
+  <meta name="keywords" content="Himanshu Raj, web developer, portfolio, startup, computer science" />
+  <title>Himanshu Raj — Builder & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300e5a0'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='18' font-family='serif' fill='%230a0a12'>H</text></svg>" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader-content">
+      <span class="loader-letter">H</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Sticky Navbar -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">HR<span class="accent">.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#achievements">Stats</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-bg-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="dot-pulse"></span>
+        <span class="mono">Available for opportunities</span>
+      </div>
+      <h1 class="hero-name reveal-up delay-1">
+        Himanshu<br /><em>Raj</em>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-2">
+        <span id="typed-text"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-desc reveal-up delay-3">
+        I build products that matter — from startup ideas to scalable web platforms.<br class="br-desktop"/>
+        Currently learning, shipping, and growing at the intersection of code & creativity.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-socials reveal-right">
+      <a href="#" aria-label="GitHub" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+      </a>
+      <a href="#" aria-label="LinkedIn" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="#" aria-label="Twitter" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span class="mono">scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">01 /</span> About</div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-image-frame">
+            <div class="about-img-placeholder">
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="80" r="45" fill="rgba(0,229,160,0.15)" stroke="rgba(0,229,160,0.4)" stroke-width="1.5"/>
+                <ellipse cx="100" cy="175" rx="65" ry="40" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.3)" stroke-width="1.5"/>
+                <circle cx="100" cy="78" r="28" fill="rgba(0,229,160,0.2)"/>
+              </svg>
+              <span class="mono" style="opacity:0.4; font-size:0.7rem; position:absolute; bottom:1rem;">Himanshu Raj</span>
+            </div>
+            <div class="img-frame-line tl"></div>
+            <div class="img-frame-line tr"></div>
+            <div class="img-frame-line bl"></div>
+            <div class="img-frame-line br"></div>
+          </div>
+          <div class="about-badge">
+            <span class="mono">CS Student</span>
+            <span class="accent">•</span>
+            <span class="mono">Builder</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <h2>Crafting ideas into <em>real products.</em></h2>
+          <p>
+            I'm Himanshu — a computer science student, self-taught developer, and someone obsessed with turning messy problems into clean digital solutions. I don't just write code; I think about why the product needs to exist, who it's for, and how to make it feel effortless.
+          </p>
+          <p>
+            Currently deep in the world of JavaScript, cloud architectures, and startup thinking. I believe the best products come from understanding real user pain — not just implementing features.
+          </p>
+
+          <div class="about-cards">
+            <div class="about-card reveal-up">
+              <div class="about-card-icon">⚙️</div>
+              <h4>Problem Solving</h4>
+              <p>Breaking complex problems into elegant, simple solutions.</p>
+            </div>
+            <div class="about-card reveal-up delay-1">
+              <div class="about-card-icon">🎨</div>
+              <h4>Frontend Dev</h4>
+              <p>Pixel-precise interfaces that feel alive and responsive.</p>
+            </div>
+            <div class="about-card reveal-up delay-2">
+              <div class="about-card-icon">🚀</div>
+              <h4>Startup Thinking</h4>
+              <p>Building lean, validated, and impactful products fast.</p>
+            </div>
+            <div class="about-card reveal-up delay-3">
+              <div class="about-card-icon">📚</div>
+              <h4>Always Learning</h4>
+              <p>Cloud, AI, design systems — curiosity drives everything.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-wrap">
+        <div class="section-sublabel reveal-up"><span class="mono">Learning Timeline</span></div>
+        <div class="timeline">
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"></div>
+            <div class="tl-date mono">2021</div>
+            <div class="tl-content">
+              <h4>First Line of Code</h4>
+              <p>Discovered programming through C++ — fell in love with logic.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal-up delay-1">
+            <div class="tl-dot"></div>
+            <div class="tl-date mono">2022</div>
+            <div class="tl-content">
+              <h4>HTML & CSS Mastery</h4>
+              <p>Built first websites; realized design and code were inseparable.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal-up delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-date mono">2023</div>
+            <div class="tl-content">
+              <h4>JavaScript & The Web</h4>
+              <p>Made things interactive. Fell deeper into the web ecosystem.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal-up delay-3">
+            <div class="tl-dot"></div>
+            <div class="tl-date mono">2024</div>
+            <div class="tl-content">
+              <h4>Startup Mode Activated</h4>
+              <p>Started ideating, building MVPs, and thinking like a founder.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal-up delay-4">
+            <div class="tl-dot active"></div>
+            <div class="tl-date mono accent">2025</div>
+            <div class="tl-content">
+              <h4>Cloud & Scale</h4>
+              <p>Exploring AWS, system design, and building production-grade apps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">02 /</span> Skills</div>
+      <h2 class="section-title reveal-up">What I work with.</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" data-skill="HTML" data-pct="90">
+          <div class="skill-icon">〈/〉</div>
+          <h4>HTML</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            <span class="skill-pct mono">90%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-1" data-skill="CSS" data-pct="85">
+          <div class="skill-icon">✦</div>
+          <h4>CSS</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-pct mono">85%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-2" data-skill="JS" data-pct="78">
+          <div class="skill-icon">JS</div>
+          <h4>JavaScript</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            <span class="skill-pct mono">78%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-3" data-skill="C++" data-pct="80">
+          <div class="skill-icon">C++</div>
+          <h4>C++</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            <span class="skill-pct mono">80%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up" data-skill="AWS" data-pct="50">
+          <div class="skill-icon">☁</div>
+          <h4>AWS Basics</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+            <span class="skill-pct mono">50%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-1" data-skill="Git" data-pct="82">
+          <div class="skill-icon">⑂</div>
+          <h4>Git & GitHub</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-pct mono">82%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-2" data-skill="RWD" data-pct="88">
+          <div class="skill-icon">⊞</div>
+          <h4>Responsive Design</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            <span class="skill-pct mono">88%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up delay-3" data-skill="UI/UX" data-pct="72">
+          <div class="skill-icon">◈</div>
+          <h4>UI / UX</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            <span class="skill-pct mono">72%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal-up" data-skill="PS" data-pct="85">
+          <div class="skill-icon">∞</div>
+          <h4>Problem Solving</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-pct mono">85%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">03 /</span> Projects</div>
+      <h2 class="section-title reveal-up">Things I've built.</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" data-index="01">
+          <div class="project-img">
+            <div class="project-img-inner" style="background: linear-gradient(135deg, #0a2a1f, #0d3d2b);">
+              <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="18" stroke="rgba(0,229,160,0.5)" stroke-width="1.5"/><path d="M20 60 Q40 45 60 60" stroke="rgba(0,229,160,0.5)" stroke-width="1.5" fill="none"/><circle cx="25" cy="55" r="8" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/><circle cx="55" cy="55" r="8" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num mono">01</div>
+            <h3>College Mentor Platform</h3>
+            <p>A peer-to-peer mentorship platform connecting seniors and juniors within college ecosystems — reducing anxiety and improving academic performance.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm">GitHub ↗</a>
+              <a href="#" class="btn-sm ghost">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-1" data-index="02">
+          <div class="project-img">
+            <div class="project-img-inner" style="background: linear-gradient(135deg, #0f1a2e, #1a2a4a);">
+              <svg viewBox="0 0 80 80" fill="none"><rect x="15" y="12" width="50" height="58" rx="4" stroke="rgba(100,150,255,0.5)" stroke-width="1.5"/><line x1="25" y1="28" x2="55" y2="28" stroke="rgba(100,150,255,0.4)" stroke-width="1.5"/><line x1="25" y1="38" x2="50" y2="38" stroke="rgba(100,150,255,0.3)" stroke-width="1.5"/><line x1="25" y1="48" x2="45" y2="48" stroke="rgba(100,150,255,0.2)" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num mono">02</div>
+            <h3>Smart Notes App</h3>
+            <p>An intelligent note-taking app with tagging, search, and auto-organization. Designed for students who need fast, structured knowledge capture.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm">GitHub ↗</a>
+              <a href="#" class="btn-sm ghost">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2" data-index="03">
+          <div class="project-img">
+            <div class="project-img-inner" style="background: linear-gradient(135deg, #1a0f1f, #2d1a3d);">
+              <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="28" stroke="rgba(180,100,255,0.4)" stroke-width="1.5"/><circle cx="40" cy="40" r="18" fill="rgba(180,100,255,0.1)" stroke="rgba(180,100,255,0.3)" stroke-width="1"/><text x="40" y="45" text-anchor="middle" font-size="14" fill="rgba(180,100,255,0.6)">?</text></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num mono">03</div>
+            <h3>Anonymous Confession Wall</h3>
+            <p>A campus social platform for anonymous sharing — exploring the intersection of community, trust, and mental wellness among students.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm">GitHub ↗</a>
+              <a href="#" class="btn-sm ghost">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-index="04">
+          <div class="project-img">
+            <div class="project-img-inner" style="background: linear-gradient(135deg, #0d1a14, #142814);">
+              <svg viewBox="0 0 80 80" fill="none"><rect x="10" y="15" width="60" height="42" rx="3" stroke="rgba(0,229,160,0.4)" stroke-width="1.5"/><line x1="10" y1="25" x2="70" y2="25" stroke="rgba(0,229,160,0.3)" stroke-width="1"/><circle cx="18" cy="20" r="3" fill="rgba(0,229,160,0.4)"/><circle cx="28" cy="20" r="3" fill="rgba(0,229,160,0.2)"/><circle cx="38" cy="20" r="3" fill="rgba(0,229,160,0.2)"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num mono">04</div>
+            <h3>Portfolio Website</h3>
+            <p>This portfolio — handcrafted with semantic HTML, vanilla CSS animations, and zero frameworks. Obsessive attention to every micro-interaction.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-1" data-index="05">
+          <div class="project-img">
+            <div class="project-img-inner" style="background: linear-gradient(135deg, #0f1f2e, #1a3040);">
+              <svg viewBox="0 0 80 80" fill="none"><ellipse cx="40" cy="25" rx="25" ry="12" stroke="rgba(0,160,229,0.5)" stroke-width="1.5"/><ellipse cx="40" cy="25" rx="25" ry="12" stroke="rgba(0,160,229,0.3)" stroke-width="1" transform="translate(0 15)"/><ellipse cx="40" cy="25" rx="25" ry="12" stroke="rgba(0,160,229,0.2)" stroke-width="1" transform="translate(0 30)"/><line x1="15" y1="25" x2="15" y2="55" stroke="rgba(0,160,229,0.3)" stroke-width="1.5"/><line x1="65" y1="25" x2="65" y2="55" stroke="rgba(0,160,229,0.3)" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num mono">05</div>
+            <h3>Cloud-Based Student System</h3>
+            <p>A scalable student management platform leveraging AWS fundamentals — exploring cloud-first architecture for institutional scale.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>AWS</span><span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm">GitHub ↗</a>
+              <a href="#" class="btn-sm ghost">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY ═══ -->
+  <section id="journey" class="section alt-bg">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">04 /</span> Experience</div>
+      <h2 class="section-title reveal-up">The journey so far.</h2>
+
+      <div class="journey-timeline">
+        <div class="jt-item reveal-up">
+          <div class="jt-marker">
+            <div class="jt-num mono">01</div>
+            <div class="jt-line"></div>
+          </div>
+          <div class="jt-card glass">
+            <div class="jt-year mono accent">2021</div>
+            <h3>Started Coding Journey</h3>
+            <p>Opened a C++ compiler for the first time. The first "Hello World" felt like magic. Started exploring the logic behind algorithms and data structures.</p>
+            <div class="jt-tags"><span>C++</span><span>Algorithms</span><span>DSA</span></div>
+          </div>
+        </div>
+        <div class="jt-item reveal-up delay-1">
+          <div class="jt-marker">
+            <div class="jt-num mono">02</div>
+            <div class="jt-line"></div>
+          </div>
+          <div class="jt-card glass">
+            <div class="jt-year mono accent">2022</div>
+            <h3>Learned HTML & CSS</h3>
+            <p>Moved from console to browser. Built first static pages, discovered CSS animations, and got obsessed with making things look beautiful on screen.</p>
+            <div class="jt-tags"><span>HTML</span><span>CSS</span><span>Web Design</span></div>
+          </div>
+        </div>
+        <div class="jt-item reveal-up delay-2">
+          <div class="jt-marker">
+            <div class="jt-num mono">03</div>
+            <div class="jt-line"></div>
+          </div>
+          <div class="jt-card glass">
+            <div class="jt-year mono accent">2023</div>
+            <h3>Started JavaScript</h3>
+            <p>Made the web interactive. Learned fetch, DOM manipulation, local storage, and started thinking about how real apps are structured under the hood.</p>
+            <div class="jt-tags"><span>JavaScript</span><span>APIs</span><span>DOM</span></div>
+          </div>
+        </div>
+        <div class="jt-item reveal-up delay-3">
+          <div class="jt-marker">
+            <div class="jt-num mono">04</div>
+            <div class="jt-line"></div>
+          </div>
+          <div class="jt-card glass">
+            <div class="jt-year mono accent">2024</div>
+            <h3>Building Startup Ideas</h3>
+            <p>Started treating every project like a product. Validated ideas with real users, participated in hackathons, and learned to ship fast and iterate.</p>
+            <div class="jt-tags"><span>Product Thinking</span><span>Hackathons</span><span>MVP</span></div>
+          </div>
+        </div>
+        <div class="jt-item reveal-up delay-4">
+          <div class="jt-marker">
+            <div class="jt-num mono active">05</div>
+          </div>
+          <div class="jt-card glass active-card">
+            <div class="jt-year mono accent">2025 — Now</div>
+            <h3>Exploring Cloud Technologies</h3>
+            <p>Diving deep into AWS, serverless architectures, and production-grade deployment. Currently building cloud-native student platforms and scaling ideas to real infrastructure.</p>
+            <div class="jt-tags"><span>AWS</span><span>Cloud</span><span>System Design</span><span>Scaling</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACHIEVEMENTS ═══ -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">05 /</span> Stats</div>
+      <h2 class="section-title reveal-up">By the numbers.</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal-up">
+          <div class="stat-num" data-target="12">0</div>
+          <div class="stat-label">Projects Built</div>
+          <div class="stat-sub mono">and counting...</div>
+        </div>
+        <div class="stat-card reveal-up delay-1">
+          <div class="stat-num" data-target="1200">0</div>
+          <div class="stat-label">Hours Learning</div>
+          <div class="stat-sub mono">code, design, product</div>
+        </div>
+        <div class="stat-card reveal-up delay-2">
+          <div class="stat-num" data-target="9">0</div>
+          <div class="stat-label">Technologies</div>
+          <div class="stat-sub mono">explored & growing</div>
+        </div>
+        <div class="stat-card reveal-up delay-3">
+          <div class="stat-num" data-target="240">0</div>
+          <div class="stat-label">GitHub Commits</div>
+          <div class="stat-sub mono">this year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services" class="section alt-bg">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">06 /</span> Services</div>
+      <h2 class="section-title reveal-up">What I can do for you.</h2>
+
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <div class="svc-icon">✦</div>
+          <h3>Web Design</h3>
+          <p>Crafting clean, modern, and purposeful designs that reflect brand identity and delight users.</p>
+        </div>
+        <div class="service-card reveal-up delay-1">
+          <div class="svc-icon">〈/〉</div>
+          <h3>Frontend Development</h3>
+          <p>Converting designs into pixel-perfect, performant, accessible web experiences.</p>
+        </div>
+        <div class="service-card reveal-up delay-2">
+          <div class="svc-icon">⊞</div>
+          <h3>Responsive Websites</h3>
+          <p>Building layouts that adapt beautifully across every screen size and device type.</p>
+        </div>
+        <div class="service-card reveal-up delay-3">
+          <div class="svc-icon">◈</div>
+          <h3>UI Improvement</h3>
+          <p>Auditing and elevating existing UIs with better UX patterns and visual refinement.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="svc-icon">🚀</div>
+          <h3>Student Startup Ideas</h3>
+          <p>Collaborating on early-stage product ideas — from validation to MVP to launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">07 /</span> Testimonials</div>
+      <h2 class="section-title reveal-up">What people say.</h2>
+
+      <div class="testi-slider-wrap reveal-up">
+        <div class="testi-slider" id="testi-slider">
+          <div class="testi-card glass">
+            <div class="testi-quote">"</div>
+            <p>Himanshu helped rebuild our college club's website from scratch. The result was miles ahead of what we expected — clean, fast, and actually usable on mobile. He just gets it.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #00e5a0, #0099ff);">A</div>
+              <div>
+                <strong>Ananya Sharma</strong>
+                <span class="mono">Tech Club President, MIT Pune</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card glass">
+            <div class="testi-quote">"</div>
+            <p>Working with Himanshu on our hackathon team was incredible. He brings product thinking that most developers at our level just don't have. He thinks about the user, not just the code.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #7c3aed, #00e5a0);">R</div>
+              <div>
+                <strong>Rohan Mehta</strong>
+                <span class="mono">Hackathon Co-builder</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card glass">
+            <div class="testi-quote">"</div>
+            <p>I mentored Himanshu briefly and was genuinely impressed by his initiative and ability to self-learn. He asks the right questions and ships things rather than waiting for perfection.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">P</div>
+              <div>
+                <strong>Priya Nair</strong>
+                <span class="mono">Senior Developer, Pune</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-controls">
+          <button class="testi-btn" id="testi-prev" aria-label="Previous">←</button>
+          <div class="testi-dots" id="testi-dots"></div>
+          <button class="testi-btn" id="testi-next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BLOG ═══ -->
+  <section id="blog" class="section alt-bg">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">08 /</span> Insights</div>
+      <h2 class="section-title reveal-up">Thinking out loud.</h2>
+
+      <div class="blog-grid">
+        <article class="blog-card reveal-up">
+          <div class="blog-img" style="background: linear-gradient(135deg, #0a1a0f, #0d2a1a);"></div>
+          <div class="blog-body">
+            <span class="blog-tag mono">Startup</span>
+            <h3>What I Learned From Building My First Startup</h3>
+            <p>The gap between "great idea" and "working product" is humbling. Here's what actually matters in the early days.</p>
+            <a href="#" class="blog-link mono">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal-up delay-1">
+          <div class="blog-img" style="background: linear-gradient(135deg, #0f0a1f, #1a0f2e);"></div>
+          <div class="blog-body">
+            <span class="blog-tag mono">Design</span>
+            <h3>Why Design Matters in Web Development</h3>
+            <p>Developers who ignore design ship products people tolerate. Developers who embrace it ship products people love.</p>
+            <a href="#" class="blog-link mono">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal-up delay-2">
+          <div class="blog-img" style="background: linear-gradient(135deg, #0a0f1f, #0f1a30);"></div>
+          <div class="blog-body">
+            <span class="blog-tag mono">Learning</span>
+            <h3>Learning JavaScript From Scratch</h3>
+            <p>No bootcamp, no paid course. Just documentation, projects, and a lot of console.log(). Here's the honest path.</p>
+            <a href="#" class="blog-link mono">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label reveal-up"><span class="mono">09 /</span> Contact</div>
+      <h2 class="section-title reveal-up">Let's build something.</h2>
+      <p class="contact-sub reveal-up">Whether it's a project, collaboration, or just a conversation — my inbox is open.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <span class="ci-icon">✉</span>
+            <div>
+              <span class="mono ci-label">Email</span>
+              <a href="mailto:himanshu@example.com">himanshu@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">⊕</span>
+            <div>
+              <span class="mono ci-label">Location</span>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="cs-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="cs-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="#" class="cs-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <div class="contact-form glass">
+            <div class="form-group">
+              <label class="mono" for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" placeholder="Ananya Sharma" />
+            </div>
+            <div class="form-group">
+              <label class="mono" for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" placeholder="hello@example.com" />
+            </div>
+            <div class="form-group">
+              <label class="mono" for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" placeholder="Let's collaborate" />
+            </div>
+            <div class="form-group">
+              <label class="mono" for="cf-msg">Message</label>
+              <textarea id="cf-msg" rows="4" placeholder="Tell me about your project or idea..."></textarea>
+            </div>
+            <button class="btn-send" id="send-btn">
+              <span class="send-text">Send Message</span>
+              <span class="send-icon">→</span>
+            </button>
+            <div class="form-success" id="form-success">
+              <span>✓</span> Message sent! I'll get back to you soon.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="#hero" class="nav-logo">HR<span class="accent">.</span></a>
+          <p class="footer-quote">"Build things. Break things. Ship things. <em>Repeat.</em>"</p>
+        </div>
+        <div class="footer-right mono">
+          <span>Designed & built by Himanshu Raj</span>
+          <span class="footer-sep">•</span>
+          <span>2025</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="mono" style="opacity:0.3; font-size:0.7rem;">Made with obsession, not templates.</span>
+      </div>
+    </div>
+    <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
